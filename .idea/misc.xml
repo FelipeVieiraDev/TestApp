@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Felipe/AndroidStudioProjects/TestApp/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/Felipe/AndroidStudioProjects/TestApp/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/Felipe/AndroidStudioProjects/TestApp/app/src/main/res/layout/fragment_dashboard.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/Felipe/AndroidStudioProjects/TestApp/app/src/main/res/layout/fragment_notifications.xml" value="0.13903985507246377" />

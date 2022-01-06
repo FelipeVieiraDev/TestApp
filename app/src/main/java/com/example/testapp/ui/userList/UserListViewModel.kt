@@ -6,15 +6,7 @@ import com.example.testapp.data.UserRepository
 
 class UserListViewModel (private val repository: UserRepository) : ViewModel() {
 
-    val viewState = MutableLiveData<ViewState>()
-
-
-    sealed class ViewState {
-        class ShowNames: ViewState()
-        class EmptyNames : ViewState()
-    }
-
-    val alluser: LiveData<List<User>> = repository.allUsers.asLiveData()
+    val allUser: LiveData<List<User>> = repository.allUsers.asLiveData()
 
 }
 

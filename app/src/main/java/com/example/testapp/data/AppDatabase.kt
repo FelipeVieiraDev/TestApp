@@ -54,7 +54,6 @@ abstract class AppDatabase : RoomDatabase() {
                     .addCallback(UserDatabaseCallback(scope))
                     .build()
                 INSTANCE = instance
-                // return instance
                 instance
             }
         }

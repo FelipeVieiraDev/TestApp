@@ -30,8 +30,6 @@ class MainActivity : AppCompatActivity(), Observer {
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.navigation_name_register, R.id.navigation_user_list, R.id.navigation_prime_numbers

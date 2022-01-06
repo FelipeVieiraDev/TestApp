@@ -22,8 +22,6 @@ import kotlinx.coroutines.launch
 
 class UserRegisterFragment : Fragment() {
 
-//    private lateinit var viewModel: UserRegisterViewModel
-
     private val viewModel: UserRegisterViewModel by viewModels {
         UserRegisterViewModelFactory((activity?.application as MyApplication).repository)
     }

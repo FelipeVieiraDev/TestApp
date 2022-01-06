@@ -13,7 +13,6 @@ class UserRegisterViewModel(private val repository: UserRepository) : ViewModel(
     val viewState = MutableLiveData<ViewState>()
 
     sealed class ViewState {
-        class ShowNames: ViewState()
         class EmptyNames : ViewState()
         class SaveUser (val user: User) : ViewState()
         class ShowErrorDialog : ViewState()

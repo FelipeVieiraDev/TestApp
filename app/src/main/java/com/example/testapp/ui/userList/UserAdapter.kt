@@ -33,9 +33,5 @@ class UserAdapter(val context: Context,
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var user = users[position]
         holder.itemView.nameTextView.text = user.firstName + " " + user.lastName
-
-//        holder.itemView.setOnClickListener {
-//            listener.onClick(users)
-//        }
     }
 }

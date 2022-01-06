@@ -4,13 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.testapp.MainActivity
 import com.example.testapp.MyApplication
 import com.example.testapp.R
 import kotlinx.android.synthetic.main.fragment_user_list.*
@@ -38,7 +34,7 @@ class UserListFragment : Fragment() {
     }
 
     private fun fillAdapters() {
-        userListViewModel.alluser.observe(viewLifecycleOwner, { users ->
+        userListViewModel.allUser.observe(viewLifecycleOwner, { users ->
             users?.let { adapter.addData(it) }
         })
     }
