@@ -12,4 +12,5 @@
     <string name="title_names">Cadastro de nomes</string>
     <string name="add_user">Add User</string>
     <string name="title_name_list">Lista de nomes</string>
+    <string name="prime_numbers_message">A cada 3 segundos, um número primo irá aparecer na tela:</string>
 </resources>

@@ -32,13 +32,10 @@ class UserAdapter(val context: Context,
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         var user = users[position]
-        holder.itemView.nameTextView.text = user.firstName + user.lastName
+        holder.itemView.nameTextView.text = user.firstName + " " + user.lastName
 
 //        holder.itemView.setOnClickListener {
-//
-//            EventTracker.log(eventName = context.getString(R.string.home_select_last_company))
-//            listener.onClick(company)
-//
+//            listener.onClick(users)
 //        }
     }
 }

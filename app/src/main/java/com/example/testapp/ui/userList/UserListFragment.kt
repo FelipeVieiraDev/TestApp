@@ -17,7 +17,6 @@ import kotlinx.android.synthetic.main.fragment_user_list.*
 
 class UserListFragment : Fragment() {
 
-//    private lateinit var viewModel: UserListViewModel
     private lateinit var adapter : UserAdapter
 
     private val userListViewModel: UserListViewModel by viewModels {

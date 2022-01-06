@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.numbers.PrimeNumbersFragment">
+
+    <TextView
+        android:id="@+id/messageTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/prime_numbers_message_size"
+        android:gravity="center"
+        android:text="@string/prime_numbers_message"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/numberTv"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/numberTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/messageTv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:text="0"
+        android:textColor="@color/prime_number_color"
+        android:background="@color/prime_number_bg"
+        android:textSize="@dimen/prime_number_size"
+        android:padding="@dimen/big_padding"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
