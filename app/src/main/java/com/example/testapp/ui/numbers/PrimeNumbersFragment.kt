@@ -19,7 +19,7 @@ class PrimeNumbersFragment : Fragment() {
     private val updateTextTask = object : Runnable {
         override fun run() {
             setHandle()
-            mHandler.postDelayed(this, 1000)
+            mHandler.postDelayed(this, 3000)
         }
     }
 
@@ -38,7 +38,6 @@ class PrimeNumbersFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         viewModel.getPrimeNumbers()
         mHandler = Handler(Looper.getMainLooper())
-        mHandler.post(updateTextTask)
         super.onViewCreated(view, savedInstanceState)
     }
 
@@ -51,19 +50,15 @@ class PrimeNumbersFragment : Fragment() {
         }
     }
 
-}
-
-class MyCustomThread : Thread() {
-
-    var handler: Handler? = null
-
-    override fun run() {
-        Looper.prepare()
-        handler = Handler(checkNotNull(Looper.myLooper())) { msg: Message ->
-            // do something with the received Message
-            true
-        }
-        Looper.loop()
+    override fun onResume() {
+        mHandler.post(updateTextTask)
+        super.onResume()
     }
+
+    override fun onPause() {
+        mHandler.removeCallbacks(updateTextTask)
+        super.onPause()
+    }
+
 }
 
