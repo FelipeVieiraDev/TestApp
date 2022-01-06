@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="title_register">Cadastro de Nomes</string>
+    <string name="title_user_list">Lista de usuários</string>
+    <string name="title_prime_numbers">Números primos</string>
+    <string name="first_name_header">Primeiro nome :</string>
+    <string name="last_name_header">Segundo nome :</string>
+    <string name="save_button">Salvar</string>
+    <string name="list_names_button">Listar Nomes</string>
+    <string name="first_name_hint">Digite o primeiro nome</string>
+    <string name="last_name_hint">Digite o Segundo nome</string>
+    <string name="title_names">Cadastro de nomes</string>
+    <string name="add_user">Add User</string>
+    <string name="title_name_list">Lista de nomes</string>
+</resources>
