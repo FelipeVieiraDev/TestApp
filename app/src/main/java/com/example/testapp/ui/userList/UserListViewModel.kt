@@ -1,10 +1,10 @@
 package com.example.testapp.ui.userList
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.*
+import com.example.testapp.data.User
+import com.example.testapp.data.UserRepository
 
-class UserListViewModel : ViewModel() {
+class UserListViewModel (private val repository: UserRepository) : ViewModel() {
 
     val viewState = MutableLiveData<ViewState>()
 
@@ -12,5 +12,18 @@ class UserListViewModel : ViewModel() {
     sealed class ViewState {
         class ShowNames: ViewState()
         class EmptyNames : ViewState()
+    }
+
+    val alluser: LiveData<List<User>> = repository.allUsers.asLiveData()
+
+}
+
+class UserListViewModelFactory(private val repository: UserRepository) : ViewModelProvider.Factory {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        if (modelClass.isAssignableFrom(UserListViewModel::class.java)) {
+            @Suppress("UNCHECKED_CAST")
+            return UserListViewModel(repository) as T
+        }
+        throw IllegalArgumentException("Unknown ViewModel class")
     }
 }

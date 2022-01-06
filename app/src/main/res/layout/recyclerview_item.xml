@@ -9,5 +9,8 @@
         style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/gray" />
+        android:padding="@dimen/big_padding"
+        android:textSize="@dimen/button_text_size"
+        android:layout_margin="8dp"
+        android:background="@color/gray"/>
 </LinearLayout>
